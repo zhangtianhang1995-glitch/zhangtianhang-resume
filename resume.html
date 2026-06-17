@@ -1,0 +1,1376 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>张天航 · 完整经历</title>
+    <meta name="description" content="张天航完整工作经历、个人优势、项目经历与教育经历。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <style>
+      :root {
+        --ink: #f5f7fb;
+        --paper: #07090d;
+        --muted: #8d95a3;
+        --line: rgba(222, 231, 255, 0.12);
+        --panel: rgba(16, 20, 29, 0.72);
+        --acid: #d8c68a;
+        --coral: #8eb5ff;
+        --cyan: #7ce7d2;
+        --shadow: 0 28px 90px rgba(0, 0, 0, 0.38);
+        --content-max: 1680px;
+        --page-gutter: max(clamp(24px, 7vw, 92px), calc((100vw - var(--content-max)) / 2));
+        --header-gutter: max(clamp(18px, 4vw, 44px), calc((100vw - var(--content-max)) / 2));
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: #05070b;
+        color: var(--ink);
+        font-family: "Inter", "Noto Sans SC", system-ui, sans-serif;
+        text-rendering: optimizeLegibility;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .resume-page {
+        position: relative;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 72% 10%, rgba(80, 115, 255, 0.18), transparent 28%),
+          radial-gradient(circle at 18% 28%, rgba(124, 231, 210, 0.07), transparent 24%),
+          #05070b;
+      }
+
+      .side-rays-canvas {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0.72;
+        mix-blend-mode: screen;
+      }
+
+      .resume-main {
+        position: relative;
+        z-index: 1;
+        width: min(var(--content-max), calc(100% - var(--page-gutter) * 2));
+        margin: 0 auto;
+        padding: 40px 0 96px;
+      }
+
+      .resume-hero {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr) minmax(280px, 0.48fr);
+        gap: clamp(28px, 5vw, 72px);
+        align-items: stretch;
+        padding-bottom: clamp(54px, 7vw, 92px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: rgba(245, 247, 251, 0.58);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .resume-hero-kicker,
+      .resume-portrait .resume-portrait-kicker {
+        margin: 0;
+        color: rgba(207, 216, 232, 0.72);
+        font-size: 14px;
+        line-height: 1;
+      }
+
+      .resume-portrait {
+        display: grid;
+        align-content: start;
+        gap: 18px;
+      }
+
+      .resume-portrait img {
+        width: 100%;
+        aspect-ratio: 4 / 4.9;
+        border-radius: 32px;
+        object-fit: cover;
+        object-position: center 35%;
+        background:
+          radial-gradient(circle at 50% 22%, rgba(142, 181, 255, 0.34), transparent 34%),
+          linear-gradient(145deg, #151b28, #07090d);
+      }
+
+      .resume-portrait h1 {
+        margin: 0;
+        color: #f5f7fb;
+        font-family: "Inter Tight", "Inter", "Noto Sans SC", system-ui, sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .resume-portrait h1 span {
+        margin-left: 10px;
+        color: #f5f7fb;
+        font-size: inherit;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .resume-monologue {
+        display: grid;
+        align-content: start;
+        gap: 15px;
+      }
+
+      .resume-monologue p {
+        margin: 0;
+        color: rgba(207, 216, 232, 0.78);
+        font-size: clamp(15px, 1vw, 16px);
+        line-height: 1.78;
+      }
+
+      .portfolio-button {
+        display: inline-flex;
+        width: fit-content;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+        padding: 0 20px;
+        border: 1px solid rgba(142, 181, 255, 0.36);
+        border-radius: 999px;
+        background: rgba(142, 181, 255, 0.1);
+        color: rgba(245, 247, 251, 0.9);
+        font-size: 15px;
+        font-weight: 900;
+        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      }
+
+      .portfolio-button:hover {
+        transform: translateY(-2px);
+        border-color: rgba(142, 181, 255, 0.72);
+        background: rgba(142, 181, 255, 0.16);
+      }
+
+      .resume-profile {
+        display: grid;
+        align-content: start;
+        gap: 22px;
+        padding: 26px;
+        border: 1px solid rgba(222, 231, 255, 0.14);
+        border-radius: 28px;
+        background: rgba(245, 247, 251, 0.045);
+      }
+
+      .resume-profile dl {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+      }
+
+      .resume-profile dl div {
+        display: grid;
+        grid-template-columns: 74px minmax(0, 1fr);
+        gap: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .resume-profile dt {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .resume-profile dd {
+        margin: 0;
+        color: rgba(245, 247, 251, 0.86);
+        font-weight: 800;
+      }
+
+      .resume-section {
+        padding: clamp(48px, 7vw, 86px) 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .resume-section-heading {
+        display: flex;
+        align-items: baseline;
+        gap: 18px;
+        margin-bottom: 28px;
+      }
+
+      .resume-section-heading span {
+        color: #8eb5ff;
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .resume-section-heading h2 {
+        margin: 0;
+        font-family: "Inter Tight", "Inter", "Noto Sans SC", system-ui, sans-serif;
+        font-size: clamp(32px, 4vw, 64px);
+        line-height: 1;
+      }
+
+      .resume-advantage-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .resume-advantage-grid article,
+      .resume-job,
+      .resume-education {
+        border: 1px solid rgba(222, 231, 255, 0.12);
+        border-radius: 24px;
+        background: rgba(245, 247, 251, 0.04);
+      }
+
+      .resume-advantage-grid article {
+        min-height: 230px;
+        padding: 24px;
+      }
+
+      .resume-advantage-grid i,
+      .resume-education i {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        background: rgba(142, 181, 255, 0.1);
+        color: #8eb5ff;
+        font-size: 22px;
+      }
+
+      .resume-advantage-grid h3,
+      .resume-education h3 {
+        margin: 28px 0 14px;
+        font-size: 24px;
+      }
+
+      .resume-advantage-grid p,
+      .resume-education p {
+        margin: 0;
+        color: rgba(207, 216, 232, 0.76);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .resume-jobs {
+        display: grid;
+        gap: 22px;
+      }
+
+      .resume-job {
+        overflow: hidden;
+      }
+
+      .resume-job header {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 26px 28px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .resume-job h3 {
+        margin: 0;
+        font-size: clamp(26px, 3vw, 42px);
+        line-height: 1;
+      }
+
+      .resume-job header p {
+        margin: 10px 0 0;
+        color: rgba(207, 216, 232, 0.72);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .resume-job time {
+        flex: none;
+        color: rgba(207, 216, 232, 0.68);
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .resume-job-body {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+      }
+
+      .resume-job-body section {
+        padding: 28px;
+        background: #05070b;
+      }
+
+      .resume-job h4 {
+        margin: 0 0 18px;
+        color: #8eb5ff;
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .resume-job ol {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding-left: 1.2em;
+        color: rgba(207, 216, 232, 0.78);
+        line-height: 1.82;
+      }
+
+      .resume-job li::marker {
+        color: rgba(245, 247, 251, 0.76);
+        font-weight: 900;
+      }
+
+      .resume-education {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+        padding: 28px;
+      }
+
+      .resume-education h3 {
+        margin-top: 0;
+      }
+
+      .resume-premium {
+        --resume-hairline: rgba(222, 231, 255, 0.11);
+        --resume-card: rgba(245, 247, 251, 0.035);
+        --resume-card-strong: rgba(245, 247, 251, 0.065);
+        --resume-text: rgba(220, 228, 242, 0.82);
+      }
+
+      .resume-premium .resume-hero {
+        position: relative;
+        min-height: auto;
+        grid-template-columns: minmax(250px, 0.34fr) minmax(0, 0.92fr) minmax(270px, 0.34fr);
+        align-items: start;
+        gap: 22px clamp(30px, 4vw, 56px);
+        padding: clamp(28px, 4vw, 48px) 0 clamp(34px, 5vw, 64px);
+        border-bottom: 1px solid var(--resume-hairline);
+      }
+
+      .resume-premium .resume-hero-kicker {
+        grid-column: 1 / -1;
+      }
+
+      .resume-premium .resume-profile {
+        position: relative;
+        top: auto;
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 0;
+        padding: 0 0 0 clamp(24px, 3vw, 40px);
+        align-self: start;
+        min-height: 100%;
+        border: 0;
+        border-left: 1px solid var(--resume-hairline);
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .resume-premium .resume-profile dl {
+        grid-column: auto;
+        gap: 0;
+      }
+
+      .resume-premium .resume-profile dl div {
+        grid-template-columns: 78px minmax(0, 1fr);
+        padding: 11px 0;
+        border-top: 1px solid var(--resume-hairline);
+      }
+
+      .resume-premium .resume-profile dl div:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .resume-premium .resume-profile dd {
+        line-height: 1.55;
+      }
+
+      .resume-premium .resume-profile dt,
+      .resume-premium .resume-profile dd {
+        font-weight: 500;
+      }
+
+      .resume-premium .resume-section {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+        gap: clamp(28px, 5vw, 72px);
+        padding: clamp(62px, 8vw, 112px) 0;
+      }
+
+      .resume-premium .resume-section-heading {
+        position: sticky;
+        top: 96px;
+        display: grid;
+        align-content: start;
+        gap: 16px;
+        height: fit-content;
+        margin: 0;
+      }
+
+      .resume-premium .resume-section-heading span {
+        width: fit-content;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #8eb5ff;
+      }
+
+      .resume-premium .resume-section-heading h2 {
+        max-width: 260px;
+        font-size: clamp(30px, 3vw, 48px);
+        line-height: 1.04;
+      }
+
+      .resume-premium .resume-advantage-grid {
+        grid-column: 2;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .resume-premium .resume-advantage-grid article {
+        position: relative;
+        min-height: 300px;
+        padding: 26px;
+        border-radius: 28px;
+        background: var(--resume-card);
+        overflow: hidden;
+      }
+
+      .resume-premium .resume-advantage-grid h3 {
+        margin-top: 64px;
+        font-size: 28px;
+      }
+
+      .resume-premium .resume-jobs {
+        grid-column: 2;
+        position: relative;
+        gap: 28px;
+      }
+
+      .resume-premium .resume-job {
+        position: relative;
+        display: grid;
+        grid-template-columns: 78px minmax(0, 1fr);
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+      }
+
+      .resume-premium .resume-job header {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 78px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 16px;
+        padding: 0 0 22px;
+        border-bottom: 0;
+      }
+
+      .resume-premium .resume-job h3 {
+        font-size: 24px;
+        letter-spacing: 0;
+      }
+
+      .resume-job-logo {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        object-fit: contain;
+        position: relative;
+        z-index: 1;
+        padding: 0;
+        background: transparent;
+      }
+
+      .resume-job-title {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .resume-premium .resume-job header p {
+        margin: 0;
+        color: rgba(245, 247, 251, 0.62);
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .resume-premium .resume-job time {
+        color: rgba(245, 247, 251, 0.46);
+        font-size: 15px;
+      }
+
+      .resume-premium .resume-job-body {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: 14px;
+        background: transparent;
+      }
+
+      .resume-premium .resume-job-body section {
+        padding: clamp(22px, 2.4vw, 34px);
+        border: 1px solid var(--resume-hairline);
+        border-radius: 28px;
+        background: var(--resume-card);
+      }
+
+      .resume-premium .resume-job h4 {
+        display: inline-flex;
+        min-height: 30px;
+        align-items: center;
+        margin-bottom: 22px;
+        padding: 0 12px;
+        border: 1px solid rgba(245, 247, 251, 0.2);
+        border-radius: 999px;
+        color: rgba(245, 247, 251, 0.68);
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .resume-premium .resume-job ol {
+        gap: 16px;
+        padding-left: 1.1em;
+        color: var(--resume-text);
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      .resume-project-grid {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .resume-project {
+        display: grid;
+        gap: 18px;
+        min-height: 220px;
+        padding: clamp(22px, 2.4vw, 30px);
+        border: 1px solid var(--resume-hairline);
+        border-radius: 28px;
+        background: var(--resume-card);
+      }
+
+      .resume-project header {
+        display: grid;
+        gap: 10px;
+      }
+
+      .resume-project h3 {
+        margin: 0;
+        color: #f5f7fb;
+        font-size: clamp(24px, 2.2vw, 34px);
+        line-height: 1.14;
+      }
+
+      .resume-project header p {
+        margin: 0;
+        color: rgba(245, 247, 251, 0.62);
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .resume-project-detail {
+        display: grid;
+        gap: 14px;
+      }
+
+      .resume-project-detail section {
+        display: grid;
+        gap: 8px;
+      }
+
+      .resume-project-detail h4 {
+        margin: 0;
+        color: rgba(245, 247, 251, 0.62);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .resume-project-detail p {
+        margin: 0;
+        color: var(--resume-text);
+        font-size: 16px;
+        line-height: 1.78;
+      }
+
+      .resume-premium .resume-education {
+        grid-column: 2;
+        width: 100%;
+        margin-left: 0;
+        max-width: none;
+        border-radius: 28px;
+        background: var(--resume-card-strong);
+      }
+
+      .border-glow-card {
+        --edge-proximity: 0;
+        --cursor-angle: 45deg;
+        --glow-x: 50%;
+        --glow-y: 50%;
+        --color-sensitivity: 50;
+        --halo-sensitivity: 36;
+        --halo-right: 0;
+        --halo-left: 0;
+        --halo-bottom: 0;
+        --halo-top: 0;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        transition: transform 180ms ease, border-color 180ms ease;
+      }
+
+      .border-glow-card > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      .border-glow-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        padding: 1px;
+        border-radius: inherit;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            180px circle at var(--glow-x) var(--glow-y),
+            rgba(142, 181, 255, 0.98),
+            rgba(124, 231, 210, 0.82) 34%,
+            rgba(155, 140, 255, 0.42) 52%,
+            transparent 72%
+          ),
+          conic-gradient(
+            from var(--cursor-angle) at 50% 50%,
+            transparent 0deg,
+            transparent 34deg,
+            rgba(142, 181, 255, 0.1) 48deg,
+            rgba(142, 181, 255, 0.95) 72deg,
+            rgba(124, 231, 210, 0.92) 92deg,
+            rgba(155, 140, 255, 0.78) 112deg,
+            rgba(142, 181, 255, 0.08) 138deg,
+            transparent 164deg,
+            transparent 360deg
+          );
+        opacity: calc((var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+        transition: opacity 220ms ease-out;
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        mask-composite: exclude;
+      }
+
+      .border-glow-card::after {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        z-index: 1;
+        border-radius: inherit;
+        pointer-events: none;
+        background:
+          linear-gradient(to left, rgba(142, 181, 255, calc(var(--halo-right) * 0.18)), transparent 108px),
+          linear-gradient(to right, rgba(142, 181, 255, calc(var(--halo-left) * 0.18)), transparent 108px),
+          linear-gradient(to top, rgba(142, 181, 255, calc(var(--halo-bottom) * 0.16)), transparent 108px),
+          linear-gradient(to bottom, rgba(142, 181, 255, calc(var(--halo-top) * 0.16)), transparent 108px),
+          radial-gradient(
+            280px circle at var(--glow-x) var(--glow-y),
+            rgba(246, 239, 214, 0.28) 0%,
+            rgba(142, 181, 255, 0.2) 24%,
+            rgba(124, 231, 210, 0.1) 46%,
+            transparent 68%
+          );
+        opacity: calc(0.95 * ((var(--edge-proximity) - var(--halo-sensitivity)) / (100 - var(--halo-sensitivity))));
+        transition: opacity 220ms ease-out;
+        mix-blend-mode: screen;
+      }
+
+      .border-glow-card:not(:hover)::before,
+      .border-glow-card:not(:hover)::after {
+        opacity: 0;
+        transition: opacity 620ms ease-in-out;
+      }
+
+      .border-glow-card:hover {
+        transform: translate3d(0, -3px, 0);
+        border-color: rgba(222, 231, 255, 0.18);
+        background-image: none;
+        box-shadow: none;
+      }
+
+      .resume-premium .resume-advantage-grid article.border-glow-card:hover,
+      .resume-premium .resume-job-body section.border-glow-card:hover,
+      .resume-project.border-glow-card:hover {
+        background-color: var(--resume-card);
+      }
+
+      .resume-premium .resume-education.border-glow-card:hover {
+        background-color: var(--resume-card-strong);
+      }
+
+      .border-glow-card:hover i {
+        background: rgba(142, 181, 255, 0.18);
+        color: #cfe0ff;
+        box-shadow: 0 0 28px rgba(142, 181, 255, 0.22);
+      }
+
+      .border-glow-card > .edge-light {
+        display: none;
+      }
+
+      @media (hover: none), (prefers-reduced-motion: reduce) {
+        .border-glow-card {
+          transition: none;
+        }
+
+        .border-glow-card::before,
+        .border-glow-card::after {
+          content: none;
+        }
+
+        .border-glow-card:hover {
+          transform: none;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .resume-main {
+          width: calc(100% - 36px);
+          padding: 92px 0 68px;
+        }
+
+        .resume-premium .resume-hero {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          padding: 36px 0 48px;
+        }
+
+        .resume-premium .resume-portrait h1 {
+          font-size: 24px;
+        }
+
+        .resume-portrait {
+          grid-template-columns: 108px minmax(0, 1fr);
+          align-items: end;
+          gap: 18px;
+        }
+
+        .resume-portrait .resume-portrait-kicker {
+          grid-column: 1 / -1;
+          margin-bottom: 0;
+        }
+
+        .resume-monologue {
+          gap: 16px;
+        }
+
+        .resume-premium .resume-profile {
+          padding: 22px 0 0;
+          border-left: 0;
+          border-top: 1px solid var(--resume-hairline);
+        }
+
+        .resume-premium .resume-profile,
+        .resume-premium .resume-section-heading {
+          position: relative;
+          top: auto;
+        }
+
+        .resume-premium .resume-section {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .resume-premium .resume-section-heading h2 {
+          max-width: none;
+        }
+
+        .resume-premium .resume-advantage-grid,
+        .resume-premium .resume-jobs,
+        .resume-project-grid,
+        .resume-premium .resume-education {
+          grid-column: auto;
+        }
+
+        .resume-premium .resume-education {
+          width: auto;
+          margin-left: 0;
+        }
+
+        .resume-premium .resume-advantage-grid,
+        .resume-project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .resume-premium .resume-advantage-grid article {
+          min-height: 220px;
+        }
+
+        .resume-premium .resume-job,
+        .resume-premium .resume-job header {
+          grid-template-columns: 48px minmax(0, 1fr);
+        }
+
+        .resume-premium .resume-job header {
+          gap: 0 12px;
+        }
+
+        .resume-job-logo {
+          width: 40px;
+          height: 40px;
+        }
+
+        .resume-premium .resume-job time {
+          grid-column: 2;
+          margin-top: 10px;
+        }
+
+        .resume-premium .resume-job-body {
+          grid-column: 1 / -1;
+          grid-template-columns: 1fr;
+        }
+
+        .resume-premium .resume-job h3 {
+          font-size: 24px;
+        }
+      }
+
+      @media print {
+        body,
+        .resume-page {
+          background: #fff;
+          color: #111827;
+        }
+
+        .resume-main {
+          width: 100%;
+          padding: 0;
+        }
+
+        .side-rays-canvas {
+          display: none;
+        }
+
+        .resume-hero,
+        .resume-premium .resume-section,
+        .resume-premium .resume-job-body,
+        .resume-project-grid {
+          display: block;
+        }
+
+        .resume-profile,
+        .resume-advantage-grid article,
+        .resume-job-body section,
+        .resume-project,
+        .resume-education {
+          break-inside: avoid;
+          border-color: #d6dce8;
+          background: #fff;
+          color: #111827;
+        }
+      }
+    </style>
+  </head>
+  <body class="resume-page">
+    <canvas class="side-rays-canvas" aria-hidden="true"></canvas>
+    <main class="resume-main resume-premium">
+      <section class="resume-hero">
+        <p class="eyebrow resume-hero-kicker">Personal Statement</p>
+        <div class="resume-portrait">
+          <img src="./resume-assets/tianhang.webp" alt="张天航个人照片" />
+          <div>
+            <h1>张天航 <span>TianHang</span></h1>
+          </div>
+        </div>
+
+        <div class="resume-monologue">
+          <p>我是一名拥有 8 年经验的 UI/UX 设计师，职业经历从视觉设计逐步延展到交互设计、体验策略与企业级产品设计。相比单纯追求视觉表现，我更关注如何把复杂业务关系拆解清楚，让页面结构、操作路径和信息表达真正服务于使用效率。</p>
+          <p>在快手企业应用部，我长期负责 HR 数字化领域的核心系统体验设计，覆盖招聘、调薪奖金、人力成本、员工转正等复杂业务场景。通过业务分析、信息架构、交互设计、视觉落地和设计验收，持续推动内部系统体验统一与效率提升。</p>
+          <p>在京东阶段，我参与京麦、京粉、京东慧采、京东锦礼等多类产品设计，覆盖 PC、移动端、小程序、官网和运营活动，形成了从视觉表达、品牌设计到产品体验的综合能力。</p>
+          <p>现在我也在持续探索 AIGC、vibecoding 与企业级页面搭建 skill，希望把设计经验沉淀为可复用的规则和系统能力，让高质量 B 端页面更快、更稳定地被生成和落地。</p>
+          <a class="portfolio-button" href="https://zhangtianhang1995-glitch.github.io/portfolio/" target="_blank" rel="noopener noreferrer">查看作品集</a>
+        </div>
+
+        <aside class="resume-profile" aria-label="个人信息">
+          <dl>
+            <div><dt>姓名</dt><dd>张天航 / 天航</dd></div>
+            <div><dt>经验</dt><dd>8 年 UI/UX 设计经验</dd></div>
+            <div><dt>学历</dt><dd>本科 · 华中科技大学</dd></div>
+            <div><dt>专业</dt><dd>产品设计</dd></div>
+            <div><dt>电话</dt><dd><a href="tel:18500394024">18500394024</a></dd></div>
+            <div><dt>邮箱</dt><dd><a href="mailto:1151453239@qq.com">1151453239@qq.com</a></dd></div>
+            <div><dt>微信</dt><dd>1151453239</dd></div>
+            <div><dt>意向</dt><dd>资深 UI/UX 设计师 / B 端产品设计师</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="resume-section resume-intro-section">
+        <div class="resume-section-heading">
+          <span>01</span>
+          <h2>个人优势</h2>
+        </div>
+        <div class="resume-advantage-grid">
+          <article>
+            <i class="ri-layout-grid-line" aria-hidden="true"></i>
+            <h3>复杂 B 端设计</h3>
+            <p>擅长将企业级应用场景中的复杂流程转化为清晰的信息架构与高效界面，兼顾业务目标、角色协作与操作效率。</p>
+          </article>
+          <article>
+            <i class="ri-compasses-2-line" aria-hidden="true"></i>
+            <h3>全链路 UX 能力</h3>
+            <p>覆盖业务理解、用户研究、交互设计、视觉设计、设计规范、组件沉淀与落地验收，可独立推进 0-1 与系统化改版项目。</p>
+          </article>
+          <article>
+            <i class="ri-robot-2-line" aria-hidden="true"></i>
+            <h3>AI 与工程化探索</h3>
+            <p>关注 AIGC、vibecoding 与企业级页面搭建 skill，将设计经验结构化为规则，辅助高质量 B 端页面快速生成。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-section resume-work-section" id="work-detail">
+        <div class="resume-section-heading">
+          <span>02</span>
+          <h2>工作经历</h2>
+        </div>
+
+        <div class="resume-jobs">
+          <article class="resume-job">
+            <header>
+              <img class="resume-job-logo" src="./resume-assets/kuaishou-app-icon.png" alt="" aria-hidden="true" />
+              <div class="resume-job-title">
+                <h3>快手</h3>
+                <p>UX 设计师</p>
+              </div>
+              <time>2021.03-至今</time>
+            </header>
+            <div class="resume-job-body">
+              <section>
+                <h4>内容</h4>
+                <ol>
+                  <li>在快手企业应用部负责 HR 数字化领域多个核心业务系统的全链路体验设计，覆盖招聘、调薪与奖金、人力成本、员工转正等方向。</li>
+                  <li>深度参与业务分析、交互设计、视觉设计及设计落地全过程，将复杂业务流程转化为清晰可执行的产品方案。</li>
+                  <li>主导企业级设计系统与组件库建设，推动设计规范统一、体验一致性提升与研发协同效率提升。</li>
+                </ol>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <ol>
+                  <li>主导快手人事系统 B 端组件体系建设，搭建与业务契合度更高的 B 端设计系统。</li>
+                  <li>推动十余个业务系统体验统一，组件覆盖率达到 90%，设计人效提升约 20%-30%。</li>
+                  <li>参与企业级页面搭建 skill 规范沉淀，探索 AI 在企业应用设计与页面生成场景中的落地方式。</li>
+                </ol>
+              </section>
+            </div>
+          </article>
+
+          <article class="resume-job">
+            <header>
+              <img class="resume-job-logo" src="./resume-assets/jingdong-app-icon.png" alt="" aria-hidden="true" />
+              <div class="resume-job-title">
+                <h3>京东</h3>
+                <p>视觉设计师</p>
+              </div>
+              <time>2017.07-2021.02</time>
+            </header>
+            <div class="resume-job-body">
+              <section>
+                <h4>内容</h4>
+                <ol>
+                  <li>主要负责京麦、京粉、大客户、京东慧采、京东锦礼等业务线产品设计工作。</li>
+                  <li>覆盖 PC 端、移动端、小程序、官网、H5 活动与品牌视觉等多类产品形态。</li>
+                  <li>参与需求分析、视觉设计、运营活动设计、品牌视觉升级及设计规范建设。</li>
+                </ol>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <ol>
+                  <li>参与京麦品牌与体验升级，优化商家移动端核心页面的信息层级、功能入口与视觉规范。</li>
+                  <li>负责京东慧采 PC 端体验设计，提升企业采购平台的信息获取与操作效率。</li>
+                  <li>完成京东锦礼、春节礼包、H5 游戏等品牌及营销设计，支撑业务传播与用户参与。</li>
+                </ol>
+              </section>
+            </div>
+          </article>
+
+          <article class="resume-job">
+            <header>
+              <img class="resume-job-logo" src="./resume-assets/iqiyi-app-icon.png" alt="" aria-hidden="true" />
+              <div class="resume-job-title">
+                <h3>爱奇艺</h3>
+                <p>视觉设计师 · 实习</p>
+              </div>
+              <time>2016.06-2016.09</time>
+            </header>
+            <div class="resume-job-body">
+              <section>
+                <h4>内容</h4>
+                <ol>
+                  <li>负责爱奇艺泡泡社区相关视觉设计工作，参与日常运营活动、热点专题、表情包及明星互动等内容设计。</li>
+                  <li>负责活动焦点图、运营物料及功能入口视觉输出，配合业务节奏完成多类型内容支持。</li>
+                </ol>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <ol>
+                  <li>积累互联网内容社区与运营设计经验，形成对活动视觉、信息层级和用户注意力引导的基础判断。</li>
+                  <li>完成从校园设计能力到商业项目交付的实践过渡，为后续产品体验设计发展打下基础。</li>
+                </ol>
+              </section>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-section resume-project-section" id="projects">
+        <div class="resume-section-heading">
+          <span>03</span>
+          <h2>项目经历</h2>
+        </div>
+        <div class="resume-project-grid">
+          <article class="resume-project">
+            <header>
+              <h3>B 端设计系统</h3>
+            </header>
+            <div class="resume-project-detail">
+              <section>
+                <h4>内容</h4>
+                <p>围绕快手人事系统高频业务场景，构建设计规范、组件体系与页面模板，搭建与业务契合度更高的 B 端设计系统。</p>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <p>推动十余个系统体验统一，组件覆盖率达到 90%，设计人效提升 20%-30%，显著提升跨系统协作与研发落地效率。</p>
+              </section>
+            </div>
+          </article>
+
+          <article class="resume-project">
+            <header>
+              <h3>为企业应用设计</h3>
+            </header>
+            <div class="resume-project-detail">
+              <section>
+                <h4>内容</h4>
+                <p>聚焦企业应用中的流程效率、信息组织与操作体验，将复杂业务逻辑转化为清晰、可用、易协作的产品界面设计方案。</p>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <p>通过系统化的信息架构与界面设计方法，提升企业内部复杂流程的可理解性与操作效率，为后续企业应用设计规范和 AI 辅助设计实践提供基础。</p>
+              </section>
+            </div>
+          </article>
+
+          <article class="resume-project">
+            <header>
+              <h3>Enterprise UI Skill</h3>
+            </header>
+            <div class="resume-project-detail">
+              <section>
+                <h4>内容</h4>
+                <p>沉淀企业级 UI 设计方法与组件生成规则，通过结构化经验、设计模式与自动化能力，辅助快速搭建高质量 B 端页面。</p>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <p>将设计经验转化为可复用规则，提升 B 端页面生成效率与规范一致性，探索 AIGC 与企业级设计流程结合的落地方式。</p>
+              </section>
+            </div>
+          </article>
+
+          <article class="resume-project">
+            <header>
+              <h3>调薪 &amp; 奖金系统</h3>
+            </header>
+            <div class="resume-project-detail">
+              <section>
+                <h4>内容</h4>
+                <p>围绕年度调薪与奖金发放流程，重构人员筛选、资源分配、预算校验与结果分析体验。</p>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <p>提升 HR 在复杂表格场景下的操作效率与数据判断准确性，优化多角色协作、资源分配与结果分析体验。</p>
+              </section>
+            </div>
+          </article>
+
+          <article class="resume-project">
+            <header>
+              <h3>招聘系统重构</h3>
+            </header>
+            <div class="resume-project-detail">
+              <section>
+                <h4>内容</h4>
+                <p>重构招聘系统核心工作台与面试官协作链路，梳理候选人、职位、面试与审批之间的信息关系。</p>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <p>提升 HR 与业务方在招聘流程中的处理效率，增强候选人信息识别、任务推进与跨角色协作体验。</p>
+              </section>
+            </div>
+          </article>
+
+          <article class="resume-project">
+            <header>
+              <h3>京东项目合集</h3>
+            </header>
+            <div class="resume-project-detail">
+              <section>
+                <h4>内容</h4>
+                <p>参与京麦、京东慧采、京东锦礼、押宝 H5、春节礼包等多个项目，覆盖商家工具、企业采购、礼赠业务和品牌营销。</p>
+              </section>
+              <section>
+                <h4>成果</h4>
+                <p>优化移动端与 PC 端核心页面的信息层级、功能入口和视觉规范，支撑营销活动与品牌物料设计。</p>
+              </section>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-section resume-education-section" id="education">
+        <div class="resume-section-heading">
+          <span>04</span>
+          <h2>教育经历</h2>
+        </div>
+        <article class="resume-education">
+          <i class="ri-graduation-cap-line" aria-hidden="true"></i>
+          <div>
+            <h3>华中科技大学</h3>
+            <p>产品设计 · 本科</p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script>
+      (() => {
+        const initSideRays = () => {
+          const canvas = document.querySelector(".side-rays-canvas");
+          if (!canvas || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+          const gl = canvas.getContext("webgl", {
+            alpha: true,
+            antialias: false,
+            depth: false,
+            stencil: false,
+          });
+          if (!gl) return;
+
+          const vertexSource = `
+            attribute vec2 position;
+            void main() {
+              gl_Position = vec4(position, 0.0, 1.0);
+            }
+          `;
+
+          const fragmentSource = `
+            precision highp float;
+
+            uniform float iTime;
+            uniform vec2 iResolution;
+
+            float rayStrength(vec2 raySource, vec2 rayRefDirection, vec2 coord, float seedA, float seedB, float speed) {
+              vec2 sourceToCoord = coord - raySource;
+              float cosAngle = dot(normalize(sourceToCoord), rayRefDirection);
+              return clamp(
+                (0.45 + 0.15 * sin(cosAngle * seedA + iTime * speed)) +
+                (0.3 + 0.2 * cos(-cosAngle * seedB + iTime * speed)),
+                0.0,
+                1.0
+              ) * clamp((iResolution.x - length(sourceToCoord)) / iResolution.x, 0.5, 1.0);
+            }
+
+            void main() {
+              vec2 fragCoord = gl_FragCoord.xy;
+              vec2 coord = vec2(fragCoord.x, iResolution.y - fragCoord.y);
+              vec2 rayPos = vec2(iResolution.x * 1.08, -0.42 * iResolution.y);
+
+              float tiltRad = -6.0 * 3.14159265 / 180.0;
+              float cs = cos(tiltRad);
+              float sn = sin(tiltRad);
+              vec2 rel = coord - rayPos;
+              vec2 tiltedCoord = vec2(rel.x * cs - rel.y * sn, rel.x * sn + rel.y * cs) + rayPos;
+
+              float halfSpread = 2.05 * 0.275;
+              vec2 rayRefDir1 = normalize(vec2(cos(0.785398 + halfSpread), sin(0.785398 + halfSpread)));
+              vec2 rayRefDir2 = normalize(vec2(cos(0.785398 - halfSpread), sin(0.785398 - halfSpread)));
+
+              vec3 rayColor1 = vec3(0.847, 0.776, 0.541);
+              vec3 rayColor2 = vec3(0.557, 0.710, 1.000);
+              vec4 rays1 = vec4(rayColor1, 1.0) * rayStrength(rayPos, rayRefDir1, tiltedCoord, 34.2214, 21.11349, 0.8);
+              vec4 rays2 = vec4(rayColor2, 1.0) * rayStrength(rayPos, rayRefDir2, tiltedCoord, 22.3991, 18.0234, 0.16);
+              vec4 color = rays1 * 0.18 + rays2 * 0.62;
+
+              float distanceToLight = length(fragCoord.xy - vec2(rayPos.x, iResolution.y - rayPos.y)) / iResolution.y;
+              float brightness = 1.35 * 0.4 / pow(max(distanceToLight, 0.001), 1.55);
+              color.rgb *= brightness;
+
+              float gray = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+              color.rgb = mix(vec3(gray), color.rgb, 1.35);
+              color.rgb *= smoothstep(1.05, 0.18, distanceToLight);
+              color.a = max(color.r, max(color.g, color.b)) * 0.58;
+
+              gl_FragColor = color;
+            }
+          `;
+
+          const compileShader = (type, source) => {
+            const shader = gl.createShader(type);
+            gl.shaderSource(shader, source);
+            gl.compileShader(shader);
+            if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+              gl.deleteShader(shader);
+              return null;
+            }
+            return shader;
+          };
+
+          const vertexShader = compileShader(gl.VERTEX_SHADER, vertexSource);
+          const fragmentShader = compileShader(gl.FRAGMENT_SHADER, fragmentSource);
+          if (!vertexShader || !fragmentShader) return;
+
+          const program = gl.createProgram();
+          gl.attachShader(program, vertexShader);
+          gl.attachShader(program, fragmentShader);
+          gl.linkProgram(program);
+          if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return;
+          gl.useProgram(program);
+
+          const buffer = gl.createBuffer();
+          gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+
+          const position = gl.getAttribLocation(program, "position");
+          gl.enableVertexAttribArray(position);
+          gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
+
+          const resolutionUniform = gl.getUniformLocation(program, "iResolution");
+          const timeUniform = gl.getUniformLocation(program, "iTime");
+          let animationFrame = 0;
+
+          const resize = () => {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const width = Math.max(1, Math.floor(window.innerWidth * dpr));
+            const height = Math.max(1, Math.floor(window.innerHeight * dpr));
+            if (canvas.width !== width || canvas.height !== height) {
+              canvas.width = width;
+              canvas.height = height;
+            }
+            gl.viewport(0, 0, width, height);
+            gl.uniform2f(resolutionUniform, width, height);
+          };
+
+          const render = (time) => {
+            resize();
+            gl.clearColor(0, 0, 0, 0);
+            gl.clear(gl.COLOR_BUFFER_BIT);
+            gl.uniform1f(timeUniform, time * 0.001);
+            gl.drawArrays(gl.TRIANGLES, 0, 3);
+            animationFrame = requestAnimationFrame(render);
+          };
+
+          window.addEventListener("resize", resize, { passive: true });
+          animationFrame = requestAnimationFrame(render);
+          window.addEventListener("pagehide", () => cancelAnimationFrame(animationFrame), { once: true });
+        };
+
+        initSideRays();
+
+        const cards = document.querySelectorAll(
+          ".resume-premium .resume-advantage-grid article, .resume-premium .resume-job-body section, .resume-project, .resume-premium .resume-education"
+        );
+
+        const getPointerData = (card, event) => {
+          const rect = card.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const dx = x - centerX;
+          const dy = y - centerY;
+          const scaleX = dx === 0 ? Infinity : centerX / Math.abs(dx);
+          const scaleY = dy === 0 ? Infinity : centerY / Math.abs(dy);
+          const edgeProximity = Math.min(Math.max(1 / Math.min(scaleX, scaleY), 0), 1);
+          let angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+
+          if (angle < 0) angle += 360;
+
+          return {
+            angle,
+            edgeProximity: edgeProximity * 100,
+            glowX: Math.abs(dx) / centerX > Math.abs(dy) / centerY ? (dx > 0 ? rect.width : 0) : x,
+            glowY: Math.abs(dy) / centerY > Math.abs(dx) / centerX ? (dy > 0 ? rect.height : 0) : y,
+            edgeSide: Math.abs(dx) / centerX > Math.abs(dy) / centerY ? (dx > 0 ? "right" : "left") : (dy > 0 ? "bottom" : "top"),
+          };
+        };
+
+        cards.forEach((card) => {
+          card.classList.add("border-glow-card");
+          card.style.setProperty("--edge-proximity", "0");
+
+          card.addEventListener("pointermove", (event) => {
+            const { angle, edgeProximity, glowX, glowY, edgeSide } = getPointerData(card, event);
+            card.style.setProperty("--cursor-angle", `${angle.toFixed(3)}deg`);
+            card.style.setProperty("--glow-x", `${glowX.toFixed(3)}px`);
+            card.style.setProperty("--glow-y", `${glowY.toFixed(3)}px`);
+            card.style.setProperty("--edge-proximity", edgeProximity.toFixed(3));
+            card.style.setProperty("--halo-right", edgeSide === "right" ? "1" : "0");
+            card.style.setProperty("--halo-left", edgeSide === "left" ? "1" : "0");
+            card.style.setProperty("--halo-bottom", edgeSide === "bottom" ? "1" : "0");
+            card.style.setProperty("--halo-top", edgeSide === "top" ? "1" : "0");
+          });
+
+          card.addEventListener("pointerleave", () => {
+            card.style.setProperty("--edge-proximity", "0");
+            card.style.setProperty("--halo-right", "0");
+            card.style.setProperty("--halo-left", "0");
+            card.style.setProperty("--halo-bottom", "0");
+            card.style.setProperty("--halo-top", "0");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
